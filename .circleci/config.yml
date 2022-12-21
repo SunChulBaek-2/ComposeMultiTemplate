@@ -41,11 +41,11 @@ jobs:
           name: Build Binaries
           command: ./gradlew assembleDebug;mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/AndroidTemplate-debug-${CIRCLE_BUILD_NUM}.apk
       - slack/notify:
-          channel: $SLACK_ACCESS_TOKEN_M3
+          channel: $SLACK_ACCESS_TOKEN
           event: fail
           template: basic_fail_1
       - slack/notify:
-          channel: $SLACK_ACCESS_TOKEN_M3
+          channel: $SLACK_ACCESS_TOKEN
           event: pass
           template: basic_success_1
       - store_artifacts:
