@@ -22,7 +22,7 @@ jobs:
           paths:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
-          key: jars-{{ checksum "build.gradle.kts.kts" }}-{{ checksum  "app/build.gradle.kts.kts" }}
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
       #      - run:
       #          name: Run Tests
       #          command: ./gradlew lint test
