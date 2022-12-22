@@ -32,44 +32,45 @@ dependencies {
 
 gradlePlugin {
     plugins {
+        val baseId = "kr.pe.ssun"
         register("androidApplicationCompose") {
-            id = "kr.pe.ssun.application.compose"
+            id = "${baseId}.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "kr.pe.ssun.application"
+            id = "${baseId}.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 //        register("androidApplicationJacoco") {
-//            id = "kr.pe.ssun.application.jacoco"
+//            id = "${baseId}.application.jacoco"
 //            implementationClass = "AndroidApplicationJacocoConventionPlugin"
 //        }
-//        register("androidLibraryCompose") {
-//            id = "kr.pe.ssun.library.compose"
-//            implementationClass = "AndroidLibraryComposeConventionPlugin"
-//        }
-//        register("androidLibrary") {
-//            id = "kr.pe.ssun.library"
-//            implementationClass = "AndroidLibraryConventionPlugin"
-//        }
-//        register("androidFeature") {
-//            id = "kr.pe.ssun.feature"
-//            implementationClass = "AndroidFeatureConventionPlugin"
-//        }
+        register("androidLibraryCompose") {
+            id = "${baseId}.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidLibrary") {
+            id = "${baseId}.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidFeature") {
+            id = "${baseId}.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
 //        register("androidLibraryJacoco") {
-//            id = "kr.pe.ssun.library.jacoco"
+//            id = "${baseId}.library.jacoco"
 //            implementationClass = "AndroidLibraryJacocoConventionPlugin"
 //        }
 //        register("androidTest") {
-//            id = "kr.pe.ssun.test"
+//            id = "${baseId}.test"
 //            implementationClass = "AndroidTestConventionPlugin"
 //        }
-//        register("androidHilt") {
-//            id = "kr.pe.ssun.hilt"
-//            implementationClass = "AndroidHiltConventionPlugin"
-//        }
+        register("androidHilt") {
+            id = "${baseId}.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
 //        register("firebase-perf") {
-//            id = "ssun.firebase-perf"
+//            id = "${baseId}.firebase-perf"
 //            implementationClass = "FirebasePerfConventionPlugin"
 //        }
     }
