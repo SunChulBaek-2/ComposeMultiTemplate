@@ -17,3 +17,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidTemplate"
 include(":app")
+include(":core:common")
+include(":core:designsystem")

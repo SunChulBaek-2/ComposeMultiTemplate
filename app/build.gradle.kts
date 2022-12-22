@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:common"))
+    implementation(project(":core:designsystem"))
+
     debugImplementation(libs.androidx.compose.ui.testManifest)
 
     implementation(libs.accompanist.systemuicontroller)
