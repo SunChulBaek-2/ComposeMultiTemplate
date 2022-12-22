@@ -1,4 +1,4 @@
-package com.example.template
+package kr.pe.ssun.template
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project

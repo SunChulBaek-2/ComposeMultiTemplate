@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.example.template.configureAndroidCompose
+import kr.pe.ssun.template.configureAndroidCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType

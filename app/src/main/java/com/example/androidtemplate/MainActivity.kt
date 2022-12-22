@@ -3,6 +3,7 @@ package com.example.androidtemplate
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -25,7 +26,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Column {
+                        Greeting("Android")
+                        Text("compile sdk = ${BuildConfig.COMPILE_SDK}")
+                        Text("target sdk = ${BuildConfig.TARGET_SDK}")
+                        Text("min sdk = ${BuildConfig.MIN_SDK}")
+                        Text("version name = ${BuildConfig.VERSION_NAME}")
+                        Text("version code = ${BuildConfig.VERSION_CODE}")
+                    }
                 }
             }
         }

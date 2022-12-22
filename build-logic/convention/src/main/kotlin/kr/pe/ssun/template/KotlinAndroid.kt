@@ -1,4 +1,4 @@
-package com.example.template
+package kr.pe.ssun.template
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
@@ -9,15 +9,21 @@ import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+import java.io.File
+import java.io.FileInputStream
+import java.util.Properties
 
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>,
 ) {
     commonExtension.apply {
-        compileSdk = 33
+        val propFile = file(rootProject.file("build.properties"))
+        val properties = Properties().apply { load(FileInputStream(propFile))}
+
+        compileSdk = properties.getProperty("compileSdk").toInt()
 
         defaultConfig {
-            minSdk = 21
+            minSdk = properties.getProperty("minSdk").toInt()
         }
 
         compileOptions {

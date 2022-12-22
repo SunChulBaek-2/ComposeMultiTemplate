@@ -1,17 +1,22 @@
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import com.example.template.configureFlavors
-import com.example.template.configureKotlinAndroid
+import kr.pe.ssun.template.configureFlavors
+import kr.pe.ssun.template.configureKotlinAndroid
 import kr.pe.ssun.template.configurePrintApksTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
+import java.io.FileInputStream
+import java.util.*
 
 class AndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
+            val propFile = file(rootProject.file("build.properties"))
+            val properties = Properties().apply { load(FileInputStream(propFile))}
+
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
@@ -19,7 +24,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = 33
+                defaultConfig.targetSdk = properties.getProperty("targetSdk").toInt()
                 configureFlavors(this)
             }
             extensions.configure<LibraryAndroidComponentsExtension> {

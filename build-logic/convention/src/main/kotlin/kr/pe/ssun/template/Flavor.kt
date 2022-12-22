@@ -1,9 +1,9 @@
-package com.example.template
+package kr.pe.ssun.template
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.ApplicationProductFlavor
 import com.android.build.api.dsl.CommonExtension
-import com.example.template.FlavorDimension.contentType
+import kr.pe.ssun.template.FlavorDimension.contentType
 import org.gradle.api.Project
 
 enum class FlavorDimension {
