@@ -46,6 +46,7 @@ retrofitKotlinxSerializationJson = "0.8.0"
 room = "2.5.0-rc01"
 secrets = "2.0.1"
 turbine = "0.12.1"
+versions = "0.44.0"
 
 [libraries]
 accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
@@ -132,3 +133,4 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }
 secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
