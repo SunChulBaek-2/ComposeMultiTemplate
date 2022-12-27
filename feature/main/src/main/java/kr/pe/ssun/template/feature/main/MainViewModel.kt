@@ -1,5 +1,6 @@
 package kr.pe.ssun.template.feature.main
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,5 +39,9 @@ class MainViewModel @Inject constructor(
         } catch (e: Exception) {
             mainUiState.value = MainUiState.Error
         }
+    }
+
+    fun onClick(photo: DPhoto) {
+        Log.d("MainViewModel", "[x1210x] onClick")
     }
 }
