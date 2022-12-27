@@ -14,6 +14,8 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.secrets) apply false
     alias(libs.plugins.versions) apply true
+    id("com.android.library") version "7.3.1" apply false
+    id("org.jetbrains.kotlin.android") version "1.7.20" apply false
 }
 
 // https://github.com/ben-manes/gradle-versions-plugin
