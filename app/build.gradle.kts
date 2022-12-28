@@ -51,6 +51,7 @@ dependencies {
     implementation(project(":feature:main"))
     implementation(project(":core:common"))
     implementation(project(":core:designsystem"))
+    implementation(project(":timber"))
 
     debugImplementation(libs.androidx.compose.ui.testManifest)
 

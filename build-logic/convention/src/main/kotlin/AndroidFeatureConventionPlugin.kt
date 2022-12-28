@@ -46,6 +46,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", libs.findLibrary("accompanist.navigation.animation").get())
 
                 add("implementation", libs.findLibrary("kotlinx.coroutines.android").get())
+
+                add("implementation", libs.findLibrary("timber").get())
             }
         }
     }
