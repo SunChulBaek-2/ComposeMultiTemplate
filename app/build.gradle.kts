@@ -11,33 +11,10 @@ android {
     namespace = "com.example.androidtemplate"
 
     defaultConfig {
-        val propFile = file(rootProject.file("build.properties"))
-        val properties = Properties().apply { load(FileInputStream(propFile)) }
-        applicationId = "com.example.androidtemplate"
-        versionCode = properties.getProperty("versionCode").toInt()
-        versionName = properties.getProperty("versionName")
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
 
-        }
-        buildConfigField("int", "COMPILE_SDK", compileSdk.toString())
-        buildConfigField("int", "TARGET_SDK", targetSdk.toString())
-        buildConfigField("int", "MIN_SDK", minSdk.toString())
-    }
-    signingConfigs {
-        getByName("debug") {
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
-            storeFile = file(rootProject.file("debug.keystore"))
-            storePassword = "android"
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     packagingOptions {
