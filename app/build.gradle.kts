@@ -1,6 +1,3 @@
-import java.io.FileInputStream
-import java.util.Properties
-
 plugins {
     id("kr.pe.ssun.application")
     id("kr.pe.ssun.application.compose")
