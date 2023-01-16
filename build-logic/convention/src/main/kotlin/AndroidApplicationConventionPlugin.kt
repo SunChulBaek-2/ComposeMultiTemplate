@@ -1,6 +1,5 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
-import kr.pe.ssun.template.configureFlavors
 import kr.pe.ssun.template.configureKotlinAndroid
 import kr.pe.ssun.template.configurePrintApksTask
 import org.gradle.api.Plugin
@@ -57,8 +56,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                         proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
                     }
                 }
-
-                configureFlavors(this)
             }
             extensions.configure<ApplicationAndroidComponentsExtension> {
                 configurePrintApksTask(this)

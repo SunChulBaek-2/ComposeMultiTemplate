@@ -1,6 +1,5 @@
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import kr.pe.ssun.template.configureFlavors
 import kr.pe.ssun.template.configureKotlinAndroid
 import kr.pe.ssun.template.configurePrintApksTask
 import org.gradle.api.Plugin
@@ -25,7 +24,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = properties.getProperty("targetSdk").toInt()
-                configureFlavors(this)
             }
             extensions.configure<LibraryAndroidComponentsExtension> {
                 configurePrintApksTask(this)

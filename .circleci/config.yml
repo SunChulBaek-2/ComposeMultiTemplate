@@ -39,7 +39,7 @@ jobs:
           command: sudo chmod +x ./setBuildProperties; ./setBuildProperties $CIRCLE_BUILD_NUM "1.0.0" "androiddebugkey" "android" "debug.keystore" "android"
       - run:
           name: Build Binaries
-          command: ./gradlew assembleDemoRelease;mv app/build/outputs/apk/demo/release/app-demo-release.apk app/build/outputs/apk/demo/release/AndroidTemplate-release-${CIRCLE_BUILD_NUM}.apk
+          command: ./gradlew assembleRelease;mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/AndroidTemplate-release-${CIRCLE_BUILD_NUM}.apk
       - slack/notify:
           event: fail
           template: basic_fail_1
@@ -47,5 +47,5 @@ jobs:
           event: pass
           template: basic_success_1
       - store_artifacts:
-          path: app/build/outputs/apk/demo/release
+          path: app/build/outputs/apk/release
           destination: apk
