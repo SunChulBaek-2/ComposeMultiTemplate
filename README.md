@@ -1,1 +1,1 @@
-# AndroidTemplate [![CircleCI](https://dl.circleci.com/status-badge/img/gh/x1210x/AndroidTemplate/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/x1210x/AndroidTemplate/tree/main)
+# ComposeMultiTemplate [![CircleCI](https://dl.circleci.com/status-badge/img/gh/x1210x/ComposeMultiTemplate/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/x1210x/ComposeMultiTemplate/tree/main)
