@@ -15,7 +15,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidTemplate"
+rootProject.name = "ComposeMultiTemplate"
 include(":app")
 include(":core:common")
 include(":core:data")
